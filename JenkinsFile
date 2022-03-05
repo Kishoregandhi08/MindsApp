@@ -46,10 +46,10 @@ pipeline{
             }
                 steps{
                    script{
-                    flag=env.sonar-mindapp
+                    flag=env.STAGE_NAME
                 }
                      rtUpload (
-                         serverId: 'Artifact-server',
+                         serverId: 'sonar-server',
                      spec :'''{
                              "files": [
                                       {
